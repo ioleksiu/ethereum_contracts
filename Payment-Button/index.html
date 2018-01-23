@@ -4,9 +4,6 @@
 <meta charset="utf-8" />
 <title>Some Coin | Token</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-  var stripePubKey = "pk_live_QEq5pezrACi6c5O9wPAqygU7"
-</script>
 </head>
 <body>
 <div class="container landing-page donate">
@@ -30,7 +27,6 @@ $(()=>{
     $('.pay-eth').removeClass('hide')
     $('.pay-eth').click(()=>{
       $('.pay-eth').html('😃 Loading…')
-      // analytics.track('Clicked Donate')
       let amountEth = prompt('Enter the number of token to buy. 1 Token == 0.1 Ether')
       if (!amountEth || amountEth.length < 1) { amountEth = '1' }
       web3.eth.sendTransaction({ 
